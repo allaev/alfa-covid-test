@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import classes from './styles/info-list-item.module.scss';
 
 const InfoListItem = ({dataKey, dataVal}) => {
@@ -9,3 +10,14 @@ const InfoListItem = ({dataKey, dataVal}) => {
 }
 
 export default InfoListItem;
+
+InfoListItem.propTypes = {
+	dataKey: PropTypes.string.isRequired,
+	dataVal: PropTypes.oneOfType(
+    [PropTypes.string, PropTypes.number]
+  )
+};
+
+InfoListItem.defaultProps = {
+  dataVal: null
+};

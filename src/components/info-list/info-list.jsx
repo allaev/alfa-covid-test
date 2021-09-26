@@ -1,5 +1,6 @@
 import {parseKeyString} from '../../utils/utils';
 import InfoListItem from '../info-list-item/info-list-item';
+import PropTypes from 'prop-types';
 import classes from './styles/info-list.module.scss';
 
 const InfoList = ({infoData}) => {
@@ -21,3 +22,7 @@ const InfoList = ({infoData}) => {
 }
 
 export default InfoList;
+
+InfoList.propTypes = {
+	infoData: PropTypes.object.isRequired
+};

@@ -1,4 +1,5 @@
 import {Select} from "@alfalab/core-components/select";
+import PropTypes from 'prop-types';
 
 const Filter = ({data, selected, handleChange}) => {
   const optionList = Object.keys(data).length ? Object.keys(data).map(el => {
@@ -21,3 +22,9 @@ const Filter = ({data, selected, handleChange}) => {
 }
 
 export default Filter;
+
+Filter.propTypes = {
+	data: PropTypes.object.isRequired,
+	selected: PropTypes.string.isRequired,
+	handleChange: PropTypes.func.isRequired
+};

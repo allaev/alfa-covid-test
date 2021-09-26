@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header/>
+      <Header headerText="😷 COVID-19 cases info"/>
       <Divider/>
       <div className="content">
         <Spinner size='m' visible={isLoading} />
